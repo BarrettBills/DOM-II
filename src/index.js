@@ -52,3 +52,10 @@ document.addEventListener('mousemove', event => {
     console.log(`.: ${event.clientX}...y: ${event.clientY}`);
 })
 
+const docKeydown = document.querySelector('body');
+function escKey(event) {
+    if (event.key === 'Escape') {
+        docKeydown.style.display = 'none';
+    }
+}
+document.addEventListener('keydown', escKey);
